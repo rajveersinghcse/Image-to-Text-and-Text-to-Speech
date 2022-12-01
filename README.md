@@ -1,4 +1,4 @@
-# Image_to_Text_and_Text_to_Speech
+# Image to Text and Text to Speech
 
 <h3>Hey,👨🏻‍💻</h3>
 <p>This program can convert the image into text and give that image into text output. And convert that output into Speech form.</p>
