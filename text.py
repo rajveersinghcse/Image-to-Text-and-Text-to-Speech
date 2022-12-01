@@ -1,17 +1,17 @@
-from gtts import gTTS #text to speech convertion
+from gtts import gTTS  #important libraries for this program
 import pytesseract
 import os
 from PIL import Image
 import cv2
 
-image=cv2.imread("download.png")
+image=cv2.imread("download.png")  #read the image
 cv2.imshow('input image',image)
 print(image.shape)
 print(image.size)
 print(type(image))
 
-image = cv2.resize(image,(200,250))
-cv2.imshow('resized image',image) #to show the image in text
+image = cv2.resize(image,(200,250)) #to show the image in text
+cv2.imshow('resized image',image)  
 cv2.imwrite('image.png',image)
 cv2.imshow('new',image)
 gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
