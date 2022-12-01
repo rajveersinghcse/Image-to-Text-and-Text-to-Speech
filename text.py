@@ -12,7 +12,7 @@ print(type(img))
 
 img = cv2.resize(img,(200,250))
 cv2.imshow('resized image',img) #to show the image in text
-cv2.imwrite('inp.png',img)
+cv2.imwrite('img.png',img)
 cv2.imshow('new',img)
 gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 cv2.imshow('gray',gray)
@@ -22,11 +22,9 @@ cv2.imshow('black and white',bw)
 #image to text
 pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
 result=pytesseract.image_to_string(img)
-
 print(result)
 
 ##text to speech
-y='en'
-z=gTTS(text=result,lang=y,slow=False)
-z.save('text.mp3')
-os.system('text.mp3')
+speach=gTTS(text=result,lang='en',slow=False)
+speach.save('speach.mp3')
+os.system('speach.mp3')
